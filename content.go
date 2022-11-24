@@ -65,9 +65,10 @@ type ContentAppearancePublished struct {
 
 // Links contains link information
 type Links struct {
-	Base   string `json:"base"`
-	TinyUI string `json:"tinyui"`
-	WebUI  string `json:"webui"`
+	Base     string `json:"base"`
+	TinyUI   string `json:"tinyui"`
+	WebUI    string `json:"webui"`
+	Download string `json:"download"`
 }
 
 // Ancestor defines ancestors to create sub pages
@@ -197,7 +198,7 @@ func (a *API) GetContent(query ContentQuery) (*ContentSearch, error) {
 // GetChildPages returns a content list of child page objects
 func (a *API) GetChildPages(id string) (*Search, error) {
 	var (
-		results      []Results
+		results      []Content
 		searchResult Search
 	)
 
