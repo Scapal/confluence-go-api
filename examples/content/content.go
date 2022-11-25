@@ -84,7 +84,7 @@ func main() {
 		Version: &goconfluence.Version{
 			Number: 2,
 		},
-		Space: goconfluence.Space{
+		Space: &goconfluence.Space{
 			Key: "SomeSpaceKey",
 		},
 	}
